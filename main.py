@@ -230,11 +230,12 @@ async def chat(payload: ChatRequest):
         ) from exc
 
 # -------------------- TEXT TO SPEECH --------------------
+class TTSRequest(BaseModel):
+    message:str
 
 @app.post("/api/tts")
-async def text_to_speech(request: Request):
-    payload = await request.json()
-    text = str(payload.get("message", "")).strip()
+async def text_to_speech(payload : TTSRequest):
+    text = payload.message.strip()
 
     if not text:
         raise HTTPException(status_code=400, detail="Text is required.")
