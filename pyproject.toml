@@ -16,6 +16,7 @@ dependencies = [
     "python-multipart>=0.0.32",
     "uvicorn[standard]>=0.54.0",
     "SQLAlchemy",
+    "pymysql>=1.2.3",
 ]
 
 [project.scripts]
