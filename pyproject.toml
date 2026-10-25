@@ -1,0 +1,25 @@
+[project]
+name = "voice-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "RahulOstwal", email = "rahulostwal479@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "elevenlabs>=2.73.1",
+    "fastapi>=0.151.0",
+    "groq>=1.7.0",
+    "jinja2>=3.1.6",
+    "python-dotenv>=1.2.4",
+    "python-multipart>=0.0.32",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+voice-bot = "voice_bot:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
